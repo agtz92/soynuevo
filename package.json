@@ -20,6 +20,7 @@
     "@fortawesome/react-fontawesome": "^0.1.11",
     "@types/cheerio": "^0.22.22",
     "gatsby": "^2.24.66",
+    "gatsby-plugin-brotli": "^2.0.0",
     "gatsby-plugin-netlify-cms": "^4.3.16",
     "gsap": "^3.5.1",
     "jquery": "^3.5.1",
