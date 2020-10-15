@@ -1,11 +1,13 @@
 module.exports = {
   plugins: [
-    {
-      resolve: 'gatsby-plugin-brotli',
-      options: {
-        extensions: ['css', 'html', 'js', 'svg']
-      }
-    },
     [`gatsby-plugin-netlify-cms`],
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/blog/`,
+      },
+    },
+    `gatsby-transformer-remark`,
   ]
 }
