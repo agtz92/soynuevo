@@ -5,6 +5,7 @@ module.exports = {
       options: {
         extensions: ['css', 'html', 'js', 'svg']
       }
-    }
+    },
+    [`gatsby-plugin-netlify-cms`],
   ]
 }
