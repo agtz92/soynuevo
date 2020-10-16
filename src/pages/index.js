@@ -19,7 +19,6 @@ export default function Home() {
     
     <React.Fragment>
     <NavBar />
-    <Heading color="gold">INDEX</Heading>
     <SimpleSlider/>
     <Heading color="dark">Ve nuestras categorías</Heading>
     <PostBlockContainer name="Pesca">
