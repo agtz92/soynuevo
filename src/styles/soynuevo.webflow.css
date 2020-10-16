@@ -595,6 +595,17 @@
     -o-object-fit: contain;
     object-fit: contain;
   }
+  .icon {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+  }
+  .div-block-9 {
+    width: 100%;
+  }
+  .div-block-10 {
+    background-position: 50% 50%;
+    background-size: cover;
+  }
 }
 
 @media screen and (max-width: 479px) {
