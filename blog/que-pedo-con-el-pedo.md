@@ -1,6 +1,6 @@
 ---
 title: Que pedo con el pedo
-slug: test
+slug: que-pedo
 featuredimage: /assets/silly_husky.jpg
 date: 2020-10-15T08:36:49.643Z
 dificultad: Experto
