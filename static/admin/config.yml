@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: agtz92/soynuevo
+  branch: main
 
 media_folder: static/assets
 public_folder: /assets
