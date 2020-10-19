@@ -3,6 +3,7 @@ title: Que pedo con el pedo
 slug: test
 date: 2020-10-15T08:36:49.643Z
 dificultad: Experto
+categoria: Acampar
 ---
 Bacon ipsum dolor amet ground round cupim jerky tail. Brisket jerky strip steak beef ribs porchetta tri-tip. Capicola buffalo beef boudin, filet mignon prosciutto sirloin tenderloin swine fatback chislic ham hock venison pork chop. Turducken tongue biltong ball tip. Tongue porchetta pig tenderloin bresaola shankle t-bone jerky. Sausage jowl spare ribs kielbasa ribeye, tail picanha drumstick.
 
