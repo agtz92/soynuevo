@@ -1,4 +1,5 @@
 import React from "react"
+import { Link, graphql } from "gatsby"
 import Heading from "../components/heading"
 import NavBar from "../components/navbar"
 import SimpleSlider from "../components/slider"
@@ -12,7 +13,8 @@ import bg4 from '../images/slider/carpinteria.jpg'
 import bg5 from '../images/slider/cocinar.jpg'
 import bg6 from '../images/slider/cocteleria.jpg'
 import bg7 from '../images/slider/jardineria.jpg'
-export default function Home() {
+
+export default function Home({data}) {
   let styles = {
     height: '100vh'
   };
@@ -38,8 +40,40 @@ export default function Home() {
         <PostBlock name="Pesca Lobina" text="LOREM IPSUM MOTHERFUCKER" nivel="Básico" background={bg1} />
       </Blockcontainer>
 
-    
+      <div>
+
+        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <div key={node.id}>
+            <Link to={node.frontmatter.slug}>
+              <h3>{node.frontmatter.title}{" "}<span>— {node.frontmatter.date}</span></h3>
+              <p>{node.excerpt}</p>
+            </Link>
+          </div>
+        ))}
+      </div>
+
     </React.Fragment>
+
+    
   )
   
 }
+export const query = graphql`
+  query {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
+            slug
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`
