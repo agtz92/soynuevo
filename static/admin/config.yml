@@ -14,6 +14,7 @@ collections:
     fields:
       - { name: title, label: Title, hint: Nombre del post debe empezar con "Cómo " ej. Como Pescar Lobina en Agua Dulce }
       - { name: slug, label: Slug, hint: Debe ser el nombre del post con guiones. ej. como-pescar-lobina-en-agua-dulce }
+      - {label: "Featured Image", name: "featuredimage", widget: image}
       - { name: date, label: Date, widget: datetime }
       - { collection: dificultad, valueField: nivel, searchFields: ["nivel"], displayFields: ["nivel"], widget: relation, name: dificultad, label: Nivel de Dificultad, required: true, multiple: false, hint: Poner nivel de dificultad. Campo obligatorio}
       - { collection: categoria, valueField: categoria, searchFields: ["categoria"], displayFields: ["categoria"], widget: relation, name: categoria, label: Categoría Principal, required: true, multiple: false, hint: Poner categoría prinicpal. Campo obligatorio}
