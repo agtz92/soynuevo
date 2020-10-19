@@ -23,7 +23,7 @@ export default function Home({data}) {
     <React.Fragment>
     <NavBar />
     <SimpleSlider/>
-    <Heading color="dark">Ve nuestras categorías</Heading>
+    <Heading color="dark">Ver categorías</Heading>
       
       <Blockcontainer>
         {data.allMarkdownRemark.edges.map(({ node }) => (
