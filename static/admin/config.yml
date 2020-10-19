@@ -25,3 +25,10 @@ collections:
     slug: "{{slug}}"
     fields:
       - {widget: string, name: nivel, label: Nivel de dificultad, required: true, hint: Nivel de dificultad }
+  - name: categoria
+    label: Categoria
+    folder: cms/categorias
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {widget: string, name: categoria, label: Categoria, required: true, hint: Categoria principal }
