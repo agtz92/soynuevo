@@ -32,17 +32,6 @@ export default function Home({data}) {
           </Link>
         ))}
       </Blockcontainer>
-
-      
-
-      <div>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-            <Link to={node.frontmatter.slug}>
-              <PostBlock name={node.frontmatter.title} text={node.excerpt} nivel={node.frontmatter.dificultad} background={node.frontmatter.featuredimage} />
-            </Link>
-        ))}
-      </div>
-
     </React.Fragment>
 
     
