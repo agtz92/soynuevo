@@ -1,6 +1,6 @@
 ---
 title: Que diantres con el pedo
-slug: test
+slug: test-perro
 featuredimage: /assets/silly_husky.jpg
 date: 2020-10-19T19:27:30.915Z
 dificultad: Intermedio
