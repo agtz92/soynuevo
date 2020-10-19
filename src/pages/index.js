@@ -26,30 +26,20 @@ export default function Home({data}) {
     <Heading color="dark">Ve nuestras categorías</Heading>
       
       <Blockcontainer>
-        <PostBlock name="Pesca Lobina" text="LOREM IPSUM MOTHERFUCKER" nivel="Básico" background={bg1} />
-        <PostBlock name="Pesca Carpa" text="LOREM IPSUM MOTHERFUCKER" nivel="Básico" background={bg2} />
-        <PostBlock name="Pesca con Carnada" text="LOREM IPSUM MOTHERFUCKER" nivel="Básico" background={bg3} />
-        <PostBlock name="Pesca Mosca" text="LOREM IPSUM MOTHERFUCKER" nivel="Intermedio" background={bg4} />
-        <PostBlock name="Pesca en Orilla" text="LOREM IPSUM MOTHERFUCKER" nivel="Básico" background={bg5} />
-        <PostBlock name="Pesca Lobina" text="LOREM IPSUM MOTHERFUCKER" nivel="Básico" background={bg1} />
-        <PostBlock name="Pesca Carpa" text="LOREM IPSUM MOTHERFUCKER" nivel="Básico" background={bg2} />
-        <PostBlock name="Pesca con Carnada" text="LOREM IPSUM MOTHERFUCKER" nivel="Básico" background={bg3} />
-        <PostBlock name="Pesca Mosca" text="LOREM IPSUM MOTHERFUCKER" nivel="Intermedio" background={bg4} />
-        <PostBlock name="Pesca en Orilla" text="LOREM IPSUM MOTHERFUCKER" nivel="Básico" background={bg5} />
-        <PostBlock name="Pesca en Orilla" text="LOREM IPSUM MOTHERFUCKER" nivel="Básico" background={bg5} />
-        <PostBlock name="Pesca Lobina" text="LOREM IPSUM MOTHERFUCKER" nivel="Básico" background={bg1} />
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <Link to={node.frontmatter.slug}>
+            <PostBlock name={node.frontmatter.title} text={node.excerpt} nivel={node.frontmatter.dificultad} background={node.frontmatter.featuredimage} />
+          </Link>
+        ))}
       </Blockcontainer>
 
-      <div>
+      
 
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+      <div>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
             <Link to={node.frontmatter.slug}>
-              <h3>{node.frontmatter.title}{" "}<span>— {node.frontmatter.date}</span></h3>
-              <p>{node.excerpt}</p>
+              <PostBlock name={node.frontmatter.title} text={node.excerpt} nivel={node.frontmatter.dificultad} background={node.frontmatter.featuredimage} />
             </Link>
-          </div>
         ))}
       </div>
 
@@ -61,19 +51,25 @@ export default function Home({data}) {
 }
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-            slug
+    
+          allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+            totalCount
+            edges {
+              node {
+                id
+                frontmatter {
+                  date(formatString: "DD MMMM, YYYY")
+                  slug
+                  dificultad
+                  featuredimage
+                  tags
+                  title
+                  categoria
+                }
+                excerpt
+              }
+            }
           }
-          excerpt
-        }
-      }
-    }
+
   }
 `
