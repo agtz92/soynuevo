@@ -11,7 +11,19 @@ collections:
     folder: blog
     create: true
     fields:
-      - { name: slug, label: Slug }
+      - { name: title, label: Title, hint: Nombre del post debe empezar con "Cómo " ej. Como Pescar Lobina en Agua Dulce }
+      - { name: slug, label: Slug, hint: Debe ser el nombre del post con guiones. ej. como-pescar-lobina-en-agua-dulce }
       - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { name: body, label: Body, widget: markdown, mode: rich_text, hint: Estructura debe ser parrafo -> imagen/video -> parrafo -> imagen/video -> parrafo}
+  - name: dificultad
+    label: Niveles de Dificultad
+    folder: cms/dificultad
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - widget: string
+        name: nivel
+        label: Nivel de dificultad
+        required: true
+        hint: >-
+          Nivel de dificultad
