@@ -16,7 +16,10 @@ collections:
       - { name: slug, label: Slug, hint: Debe ser el nombre del post con guiones. ej. como-pescar-lobina-en-agua-dulce }
       - { name: date, label: Date, widget: datetime }
       - { collection: dificultad, valueField: nivel, searchFields: ["nivel"], displayFields: ["nivel"], widget: relation, name: dificultad, label: Nivel de Dificultad, required: true, multiple: false, hint: Poner nivel de dificultad. Campo obligatorio}
+      - { collection: categoria, valueField: categoria, searchFields: ["categoria"], displayFields: ["categoria"], widget: relation, name: categoria, label: Categoría Principal, required: true, multiple: false, hint: Poner categoría prinicpal. Campo obligatorio}
+      - { collection: tags, valueField: tag, searchFields: ["tag"], displayFields: ["tag"], widget: relation, name: tags, label: Tags, required: true, multiple: true, hint: Tags para identificar el artículo. Campo obligatorio}
       - { name: body, label: Body, widget: markdown, mode: rich_text, hint: Estructura debe ser parrafo -> imagen/video -> parrafo -> imagen/video -> parrafo}
+      
      
   - name: dificultad
     label: Niveles de Dificultad
@@ -28,7 +31,14 @@ collections:
   - name: categoria
     label: Categoria
     folder: cms/categorias
-    create: true
+    create: false
     slug: "{{slug}}"
     fields:
       - {widget: string, name: categoria, label: Categoria, required: true, hint: Categoria principal }
+  - name: tags
+    label: Tags
+    folder: cms/tags
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {widget: string, name: tag, label: Tags, required: true, hint: nombre del tag }
