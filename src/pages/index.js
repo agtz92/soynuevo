@@ -4,20 +4,9 @@ import Heading from "../components/heading"
 import NavBar from "../components/navbar"
 import SimpleSlider from "../components/slider"
 import PostBlock from "../components/postblock"
-import PostBlockContainer from "../components/postBlockContainer"
 import Blockcontainer from "../components/blocksContainer"
-import bg1 from '../images/slider/asar.jpg'
-import bg2 from '../images/slider/pesca.jpg'
-import bg3 from '../images/slider/acampar.jpg'
-import bg4 from '../images/slider/carpinteria.jpg'
-import bg5 from '../images/slider/cocinar.jpg'
-import bg6 from '../images/slider/cocteleria.jpg'
-import bg7 from '../images/slider/jardineria.jpg'
 
 export default function Home({data}) {
-  let styles = {
-    height: '100vh'
-  };
   return (
     
     <React.Fragment>
@@ -26,11 +15,13 @@ export default function Home({data}) {
     <Heading color="dark">Ver categorías</Heading>
       
       <Blockcontainer>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
+        {data.allMarkdownRemark.edges.map(({ node }) => {
+          if(node.frontmatter.categoria.includes('Asar')){ return(
           <Link to={node.frontmatter.slug}>
             <PostBlock name={node.frontmatter.title} text={node.excerpt} nivel={node.frontmatter.dificultad} background={node.frontmatter.featuredimage} />
-          </Link>
-        ))}
+          </Link>)
+          }
+        })}
       </Blockcontainer>
     </React.Fragment>
 

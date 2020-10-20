@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import Heading from "./heading"
-import { Link } from "gatsby"
 import '../../node_modules/slick-carousel/slick/slick.css'
 import '../../node_modules/slick-carousel/slick/slick-theme.css'
 
@@ -9,10 +7,13 @@ import '../../node_modules/slick-carousel/slick/slick-theme.css'
 
 export default class Blockcontainer extends Component {
     render() {
+        const MAX_SLIDES= 5;
+        const infinite = this.props.children.length;
+        console.log("chidlren: " + infinite)
         //settings react slick
         const settings = {
             dots: true,
-            infinite: true,
+            infinite: false,
             speed: 500,
             slidesToShow: 5,
             slidesToScroll: 3,
