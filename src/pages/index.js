@@ -16,7 +16,7 @@ export default function Home({data}) {
       
       <Blockcontainer>
         {data.allMarkdownRemark.edges.map(({ node }) => {
-          if(node.frontmatter.categoria.includes('Asar')){ return(
+          if(node.frontmatter.categoria.includes('Pesca')){ return(
           <Link to={node.frontmatter.slug}>
             <PostBlock name={node.frontmatter.title} text={node.excerpt} nivel={node.frontmatter.dificultad} background={node.frontmatter.featuredimage} />
           </Link>)

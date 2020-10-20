@@ -7,13 +7,10 @@ import '../../node_modules/slick-carousel/slick/slick-theme.css'
 
 export default class Blockcontainer extends Component {
     render() {
-        const MAX_SLIDES= 5;
-        const infinite = this.props.children.length;
-        console.log("chidlren: " + infinite)
         //settings react slick
         const settings = {
             dots: true,
-            infinite: false,
+            infinite: true,
             speed: 500,
             slidesToShow: 5,
             slidesToScroll: 3,
