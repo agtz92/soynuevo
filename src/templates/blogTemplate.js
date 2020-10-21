@@ -1,6 +1,7 @@
 import React from "react"
-import { graphql } from "gatsby"
-import BlogLayout from "../layouts/blog-layout"
+import { Link, graphql } from "gatsby"
+import NavBar from "../components/navbar"
+import Heading from "../components/heading"
 import '../styles/normalize.css'
 import "../styles/webflow.css"
 import "../styles/soynuevo.webflow.css"
@@ -11,7 +12,8 @@ export default function Template({
     const { markdownRemark } = data // data.markdownRemark holds your post data
     const { frontmatter, html } = markdownRemark
         return (
-
+            <React.Fragment>
+            <NavBar />
             <div className="blog-post-container">
                 <div className="div-grey-post"></div>
                 <div className="blog-post">
@@ -28,6 +30,7 @@ export default function Template({
                 </div>
                 <div className="div-grey-post"></div>
             </div>
+            </React.Fragment>
         )
     
     

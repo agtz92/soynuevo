@@ -5,7 +5,6 @@ import NavBar from "../components/navbar"
 import SimpleSlider from "../components/slider"
 import PostBlock from "../components/postblock"
 import Blockcontainer from "../components/blocksContainer"
-import BlogLayout from "../layouts/blog-layout"
 
 export default function Home({data}) {
   return (
