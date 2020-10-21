@@ -1,6 +1,9 @@
 import React from "react"
+import '../styles/normalize.css'
+import "../styles/webflow.css"
+import "../styles/soynuevo.webflow.css"
 
-export default function blogLayout({ props }) {
+export default function BlogLayout({ props }) {
     return (
         <div className="blog-post-container">
             <div className="div-grey-post"></div>
