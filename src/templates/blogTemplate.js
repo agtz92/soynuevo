@@ -21,7 +21,7 @@ export default function Template({
                             <h1 className="heading dark">{frontmatter.title}</h1>
                             <div className="parpost light">{frontmatter.date}</div>
                             <div><div className="parpost bold">Nivel de experiencia : {frontmatter.dificultad}</div></div>
-                            <p className="parpost">{frontmatter.shortdescription}</p>
+                            <p className="parpost">{frontmatter.short_description}</p>
                         </div>
                     </div>
                     <div className="div-text-post"><p className="parpost">{markdownRemark.html}</p></div>
@@ -45,7 +45,7 @@ export const pageQuery = graphql`
         tags
         title
         categoria
-        
+        short_description
       }
     }
   }
