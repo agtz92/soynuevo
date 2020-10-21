@@ -19,6 +19,7 @@ collections:
       - { collection: dificultad, valueField: nivel, searchFields: ["nivel"], displayFields: ["nivel"], widget: relation, name: dificultad, label: Nivel de Dificultad, required: true, multiple: false, hint: Poner nivel de dificultad. Campo obligatorio}
       - { collection: categoria, valueField: categoria, searchFields: ["categoria"], displayFields: ["categoria"], widget: relation, name: categoria, label: Categoría Principal, required: true, multiple: false, hint: Poner categoría prinicpal. Campo obligatorio}
       - {label: "Tags", name: "tags", widget: "list", hint: Separar con comas cada tag relacionado al post}
+      - { name: short-description, label: Descripcion Corta, widget: markdown, hint: Descripcion corta de al menos 5 líneas}
       - { name: body, label: Body, widget: markdown, mode: rich_text, hint: Estructura debe ser parrafo -> imagen/video -> parrafo -> imagen/video -> parrafo}
       
      
