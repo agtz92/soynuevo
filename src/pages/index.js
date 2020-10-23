@@ -12,8 +12,8 @@ export default function Home({data}) {
     <React.Fragment>
     <NavBar />
     <SimpleSlider/>
-    <Heading color="dark">Ver categorías</Heading>
-      <h2 >Pesca</h2>
+    <Heading color="dark" >Ver categorías</Heading>
+      <h2 className="heading-categoria" >Pesca</h2>
       <Blockcontainer>
         {data.allMarkdownRemark.edges.map(({ node }) => {
           if(node.frontmatter.categoria.includes('Pesca')){ return(
@@ -23,7 +23,7 @@ export default function Home({data}) {
           }
         })}
       </Blockcontainer>
-      <h2 >Acampar </h2>
+      <h2 className="heading-categoria" >Acampar </h2>
       <Blockcontainer>
         {data.allMarkdownRemark.edges.map(({ node }) => {
           if (node.frontmatter.categoria.includes('Acampar')) {
@@ -34,7 +34,7 @@ export default function Home({data}) {
           }
         })}
       </Blockcontainer>
-      <h2 >Asar </h2>
+      <h2 className="heading-categoria" >Asar </h2>
       <Blockcontainer>
         {data.allMarkdownRemark.edges.map(({ node }) => {
           if (node.frontmatter.categoria.includes('Asar')) {
@@ -45,7 +45,7 @@ export default function Home({data}) {
           }
         })}
       </Blockcontainer>
-      <h2 >Jardinería </h2>
+      <h2 className="heading-categoria" >Jardinería </h2>
       <Blockcontainer>
         {data.allMarkdownRemark.edges.map(({ node }) => {
           if (node.frontmatter.categoria.includes('Jardineria')) {
@@ -56,7 +56,7 @@ export default function Home({data}) {
           }
         })}
       </Blockcontainer>
-      <h2 >Carpintería </h2>
+      <h2 className="heading-categoria" >Carpintería </h2>
       <Blockcontainer>
         {data.allMarkdownRemark.edges.map(({ node }) => {
           if (node.frontmatter.categoria.includes('Carpinteria')) {
@@ -67,7 +67,7 @@ export default function Home({data}) {
           }
         })}
       </Blockcontainer>
-      <h2 >Cocinar </h2>
+      <h2 className="heading-categoria" >Cocinar </h2>
       <Blockcontainer>
         {data.allMarkdownRemark.edges.map(({ node }) => {
           if (node.frontmatter.categoria.includes('Cocinar')) {
@@ -78,7 +78,7 @@ export default function Home({data}) {
           }
         })}
       </Blockcontainer>
-      <h2 >Coctelería </h2>
+      <h2 className="heading-categoria" >Coctelería </h2>
       <Blockcontainer>
         {data.allMarkdownRemark.edges.map(({ node }) => {
           if (node.frontmatter.categoria.includes('Cocteleria')) {

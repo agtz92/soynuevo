@@ -55,7 +55,14 @@
   line-height: 30px;
   font-weight: 500;
 }
-
+.div-tag {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 10px;
+    background-color:#ffbf00;
+    font-weight: 600;
+    margin-right: 10px;
+}
 .parpost {
   font-family: Montserrat, sans-serif;
   font-size: 18px;
@@ -75,10 +82,17 @@
     margin-top: 20%;
   }
 }
+.heading-categoria
+{
+  padding-left: 0.5%;
+  font-family: Abel, sans-serif;
+}
 .heading-blog-post
 {
   font-size: 1.5em!important;
   font-family: Abel, sans-serif;
+  margin-top: 0!important;
+  margin-bottom: 0!important;
 
 }
 .active-navbar
@@ -614,6 +628,7 @@
 
 .div-block-12 {
   padding: 2%;
+  color: black!important;
 }
 .div-block-3 {
   display: -webkit-box;

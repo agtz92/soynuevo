@@ -22,6 +22,7 @@ export default function Template({
                         <div className="short-description">
                             <h1 className="heading dark">{frontmatter.title}</h1>
                             <div className="parpost light">{frontmatter.date}</div>
+                                <div className="div-tag">{frontmatter.tags}</div>
                             <div><div className="parpost bold">Nivel de experiencia : {frontmatter.dificultad}</div></div>
                             <p className="parpost">{frontmatter.short_description}</p>
                         </div>
