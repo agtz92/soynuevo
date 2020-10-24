@@ -1,12 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
-
+import { Link, graphql } from "gatsby"
+import Heading from "../components/heading"
+import NavBar from "../components/navbar"
 // Utilities
 import kebabCase from "lodash/kebabCase"
 
 // Components
 import { Helmet } from "react-helmet"
-import { Link, graphql } from "gatsby"
 
 const TagsPage = ({
   data: {
@@ -16,7 +17,9 @@ const TagsPage = ({
     },
   },
 }) => (
+        
         <div>
+            <NavBar />
             <Helmet title={title} />
             <div>
                 <h1>Tags</h1>

@@ -1,4 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+.div-large-post {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  color : #3a3a3a!important;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  box-shadow: 1px 1px 3px 0 #000;
+}
+a:link {
+  text-decoration: none!important;
+}
+.list-posts
+{
+  padding: 10px!important;
+}
+.div-large-post-content {
+  padding-left: 2%;
+  width: 70%;
+}
+
+@media screen and (max-width: 767px) {
+    .div-large-post {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .div-img-large-post {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+    .div-large-post-content {
+    width: 100%;
+  }
+
+  }
 .collection-item {
   margin:0;
   width: 100vw;
@@ -18,7 +86,21 @@
   width: 70%;
   padding:1%;
 }
-
+ul li
+{
+  list-style-type: none!important;
+} 
+.tags-div
+{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+}
 .div-grey-post {
   width: 15%;
   background-color: #eee;

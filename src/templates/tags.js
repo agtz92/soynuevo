@@ -1,5 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
+import NavBar from "../components/navbar"
+import PostBlockLarge from "../components/postblocklarge"
 
 // Components
 import { Link, graphql } from "gatsby"
@@ -9,18 +11,24 @@ const Tags = ({ pageContext, data }) => {
     const { edges, totalCount } = data.allMarkdownRemark
     const tagHeader = `${totalCount} post${
         totalCount === 1 ? "" : "s"
-        } tagged with "${tag}"`
+        } con la etiqueta "${tag}"`
 
     return (
         <div>
+            <NavBar />
             <h1>{tagHeader}</h1>
-            <ul>
+            <ul className="list-posts">
                 {edges.map(({ node }) => {
                     const { slug } = node.frontmatter
                     const { title } = node.frontmatter
+                    const { short_description } = node.frontmatter
+                    const { dificultad } = node.frontmatter
+                    const { featuredimage } = node.frontmatter
                     return (
                         <li key={slug}>
-                            <Link to={`/${slug}`}>{title}</Link>
+                            <Link to={`/${slug}`}>
+                                <PostBlockLarge title={title} img={featuredimage} nivel={dificultad} description={short_description}/>
+                            </Link>
                         </li>
                     )
                 })}
@@ -29,7 +37,7 @@ const Tags = ({ pageContext, data }) => {
               This links to a page that does not yet exist.
               You'll come back to it!
             */}
-            <Link to="/tags">All tags</Link>
+            <Link to="/tags">Ve todos los tags</Link>
         </div>
     )
 }
@@ -70,8 +78,14 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
-            title
+            date(formatString: "DD MMMM, YYYY")
             slug
+            dificultad
+            featuredimage
+            tags
+            title
+            categoria
+            short_description
           }
         }
       }

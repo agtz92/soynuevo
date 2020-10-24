@@ -5,6 +5,8 @@ import Heading from "../components/heading"
 import '../styles/normalize.css'
 import "../styles/webflow.css"
 import "../styles/soynuevo.webflow.css"
+// Utilities
+import kebabCase from "lodash/kebabCase"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -22,9 +24,11 @@ export default function Template({
                         <div className="short-description">
                             <h1 className="heading dark">{frontmatter.title}</h1>
                             <div className="parpost light">{frontmatter.date}</div>
-                                <ul>
-                                    <li><div className="div-tag">{frontmatter.tags}</div></li>
-                                </ul>
+                                <div className="tags-div">
+                                    {frontmatter.tags.map((tag) => (
+                                            <Link key={tag + `tag`} to={`/tags/${kebabCase(tag)}/`}><div className="div-tag">{tag}</div></Link>
+                                    ))}</div>
+                                
                                 
                             <div><div className="parpost bold">Nivel de experiencia : {frontmatter.dificultad}</div></div>
                             <p className="parpost">{frontmatter.short_description}</p>
