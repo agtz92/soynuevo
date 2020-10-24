@@ -20,6 +20,9 @@ export default function Home({data}) {
             <Link key={node.id} to={node.frontmatter.slug}>
               <PostBlock name={node.frontmatter.title} text={node.frontmatter.short_description} nivel={node.frontmatter.dificultad} background={node.frontmatter.featuredimage} />
           </Link>)
+          }else
+          {
+            return (null)
           }
         })}
       </Blockcontainer>
@@ -31,6 +34,9 @@ export default function Home({data}) {
               <Link key={node.id} to={node.frontmatter.slug}>
                 <PostBlock name={node.frontmatter.title} text={node.frontmatter.short_description} nivel={node.frontmatter.dificultad} background={node.frontmatter.featuredimage} />
               </Link>)
+          }else
+          {
+            return (null)
           }
         })}
       </Blockcontainer>
@@ -42,6 +48,9 @@ export default function Home({data}) {
               <Link key={node.id} to={node.frontmatter.slug}>
                 <PostBlock name={node.frontmatter.title} text={node.frontmatter.short_description} nivel={node.frontmatter.dificultad} background={node.frontmatter.featuredimage} />
               </Link>)
+          }else
+          {
+            return (null)
           }
         })}
       </Blockcontainer>
@@ -53,6 +62,9 @@ export default function Home({data}) {
               <Link key={node.id} to={node.frontmatter.slug}>
                 <PostBlock name={node.frontmatter.title} text={node.frontmatter.short_description} nivel={node.frontmatter.dificultad} background={node.frontmatter.featuredimage} />
               </Link>)
+          }else
+          {
+            return (null)
           }
         })}
       </Blockcontainer>
@@ -64,6 +76,9 @@ export default function Home({data}) {
               <Link key={node.id} to={node.frontmatter.slug}>
                 <PostBlock name={node.frontmatter.title} text={node.frontmatter.short_description} nivel={node.frontmatter.dificultad} background={node.frontmatter.featuredimage} />
               </Link>)
+          }else
+          {
+            return (null)
           }
         })}
       </Blockcontainer>
@@ -75,6 +90,9 @@ export default function Home({data}) {
               <Link key={node.id} to={node.frontmatter.slug}>
                 <PostBlock name={node.frontmatter.title} text={node.frontmatter.short_description} nivel={node.frontmatter.dificultad} background={node.frontmatter.featuredimage} />
               </Link>)
+          }else
+          {
+            return (null)
           }
         })}
       </Blockcontainer>
@@ -86,6 +104,9 @@ export default function Home({data}) {
               <Link key={node.id} to={node.frontmatter.slug}>
                 <PostBlock name={node.frontmatter.title} text={node.frontmatter.short_description} nivel={node.frontmatter.dificultad} background={node.frontmatter.featuredimage} />
               </Link>)
+          }else
+          {
+            return (null)
           }
         })}
       </Blockcontainer>

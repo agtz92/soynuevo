@@ -12,7 +12,7 @@ export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
     const { markdownRemark } = data // data.markdownRemark holds your post data
-    const { frontmatter, html } = markdownRemark
+    const { frontmatter } = markdownRemark
         return (
             <React.Fragment>
             <NavBar />
@@ -22,7 +22,7 @@ export default function Template({
                     <div className="top-post">
                         <div className="featuredimage" style={{ backgroundImage: `url(${frontmatter.featuredimage})` }}></div>
                         <div className="short-description">
-                            <h1 className="heading dark">{frontmatter.title}</h1>
+                            <Heading color="dark">{frontmatter.title}</Heading>
                             <div className="parpost light">{frontmatter.date}</div>
                                 <div className="tags-div">
                                     {frontmatter.tags.map((tag) => (

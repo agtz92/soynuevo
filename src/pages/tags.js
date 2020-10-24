@@ -22,7 +22,7 @@ const TagsPage = ({
             <NavBar />
             <Helmet title={title} />
             <div>
-                <h1>Tags</h1>
+                <Heading color="dark">Tags</Heading>
                 <ul>
                     {group.map(tag => (
                         <li key={tag.fieldValue}>

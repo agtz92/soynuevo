@@ -8,8 +8,6 @@ import bg2 from '../images/slider/pesca.jpg'
 import bg3 from '../images/slider/acampar.jpg'
 import bg4 from '../images/slider/carpinteria.jpg'
 import bg5 from '../images/slider/cocinar.jpg'
-import bg6 from '../images/slider/cocteleria.jpg'
-import bg7 from '../images/slider/jardineria.jpg'
 export default function Home() {
     return (
 
