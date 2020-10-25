@@ -30,8 +30,8 @@ export default function Template({
                     "@type": "WebPage",
                     "@id":\"${perro}\"
                   },
-                  "headline": ${frontmatter.title},
-                  "description": ${frontmatter.short_description},
+                  "headline": \"${frontmatter.title}\",
+                  "description": \"${frontmatter.short_description}\",
                   "image": \"https://goofy-tereshkova-e4b6bf.netlify.app/ + ${frontmatter.featuredimage}\",  
                   "author": {
                     "@type": "Organization",
