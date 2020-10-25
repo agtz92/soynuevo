@@ -32,7 +32,7 @@ export default function Template({
                   },
                   "headline": \"${frontmatter.title}\",
                   "description": \"${frontmatter.short_description}\",
-                  "image": \"https://goofy-tereshkova-e4b6bf.netlify.app/ + ${frontmatter.featuredimage}\",  
+                  "image": \"https://goofy-tereshkova-e4b6bf.netlify.app/${frontmatter.featuredimage}\",  
                   "author": {
                     "@type": "Organization",
                     "name": "soy-nuevo.com"
@@ -42,7 +42,7 @@ export default function Template({
                     "name": "soy-nuevo",
                     "logo": {
                       "@type": "ImageObject",
-                      "url": \"https://goofy-tereshkova-e4b6bf.netlify.app/ + ${logoChico}\"
+                      "url": \"https://goofy-tereshkova-e4b6bf.netlify.app/${logoChico}\"
                     }
                   },
                   "datePublished": \"${frontmatter.date}\",
