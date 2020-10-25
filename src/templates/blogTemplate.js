@@ -1,7 +1,10 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import NavBar from "../components/navbar"
+// Components
+import { Helmet } from "react-helmet"
+import Layout from "../layouts/layout"
 import Heading from "../components/heading"
+import logoChico from "../images/logo_small.png"
 import '../styles/normalize.css'
 import "../styles/webflow.css"
 import "../styles/soynuevo.webflow.css"
@@ -13,9 +16,42 @@ export default function Template({
 }) {
     const { markdownRemark } = data // data.markdownRemark holds your post data
     const { frontmatter } = markdownRemark
+    const perro = "https://www.soy-nuevo.com" + frontmatter.title;
         return (
+          
             <React.Fragment>
-            <NavBar />
+              <Helmet title={frontmatter.title}>
+                <script type="application/ld+json">
+                  {`
+                {
+                  "@context": "https://schema.org",
+                  "@type": "BlogPosting",
+                  "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": ${perro}
+                  },
+                  "headline": ${frontmatter.title},
+                  "description": ${frontmatter.short_description},
+                  "image": ${frontmatter.featuredimage},  
+                  "author": {
+                    "@type": "Organization",
+                    "name": "soy-nuevo.com"
+                  },  
+                  "publisher": {
+                    "@type": "Organization",
+                    "name": "soy-nuevo",
+                    "logo": {
+                      "@type": "ImageObject",
+                      "url": ${logoChico}
+                    }
+                  },
+                  "datePublished": ${frontmatter.date},
+                  "dateModified": ${frontmatter.date}
+                }
+                `}
+                </script>
+              </Helmet>
+            <Layout>
             <div className="blog-post-container">
                 <div className="div-grey-post"></div>
                 <div className="blog-post">
@@ -38,6 +74,7 @@ export default function Template({
                 </div>
                 <div className="div-grey-post"></div>
             </div>
+            </Layout>
             </React.Fragment>
         )
     

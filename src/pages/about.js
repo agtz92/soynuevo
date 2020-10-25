@@ -2,7 +2,7 @@ import React from "react"
 import Blockcontainer from "../components/blocksContainer"
 import PostBlock from "../components/postblock"
 import Heading from "../components/heading"
-import NavBar from "../components/navbar"
+import Layout from "../layouts/layout"
 import bg1 from '../images/slider/asar.jpg'
 import bg2 from '../images/slider/pesca.jpg'
 import bg3 from '../images/slider/acampar.jpg'
@@ -12,7 +12,7 @@ export default function Home() {
     return (
 
         <React.Fragment>
-            <NavBar />
+            <Layout>
             <Heading color="gold">About</Heading>
             <Blockcontainer>
                 <PostBlock name="Pesca Lobina" text="LOREM IPSUM MOTHERFUCKER" nivel="Básico" background={bg1} />
@@ -28,6 +28,7 @@ export default function Home() {
                 <PostBlock name="Pesca en Orilla" text="LOREM IPSUM MOTHERFUCKER" nivel="Básico" background={bg5} />
                 <PostBlock name="Pesca Lobina" text="LOREM IPSUM MOTHERFUCKER" nivel="Básico" background={bg1} />
             </Blockcontainer>
+            </Layout>
         </React.Fragment>
     )
 

@@ -8,6 +8,8 @@ import '../../node_modules/slick-carousel/slick/slick-theme.css'
 export default class Blockcontainer extends Component {
     render() {
         //settings react slick
+        const tri = React.Children.count;
+        console.log(tri);
         const settings = {
             dots: true,
             infinite: true,
@@ -47,7 +49,6 @@ export default class Blockcontainer extends Component {
             overflow: "hidden",
             margin:"2% 0 3% 0"
         };
-        
        
         return (
             <div style={styles}>

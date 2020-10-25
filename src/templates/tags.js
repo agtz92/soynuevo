@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import NavBar from "../components/navbar"
+import Layout from "../layouts/layout"
 import PostBlockLarge from "../components/postblocklarge"
 
 // Components
@@ -14,8 +14,9 @@ const Tags = ({ pageContext, data }) => {
         } con la etiqueta "${tag}"`
 
     return (
-        <div>
-            <NavBar />
+        
+        <Layout>
+            <div>
             <h1>{tagHeader}</h1>
             <ul className="list-posts">
                 {edges.map(({ node }) => {
@@ -39,6 +40,7 @@ const Tags = ({ pageContext, data }) => {
             */}
             <Link to="/tags">Ve todos los tags</Link>
         </div>
+        </Layout>
     )
 }
 

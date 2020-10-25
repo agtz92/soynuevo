@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
 import Heading from "../components/heading"
-import NavBar from "../components/navbar"
+import Layout from "../layouts/layout"
 // Utilities
 import kebabCase from "lodash/kebabCase"
 
@@ -17,10 +17,9 @@ const TagsPage = ({
     },
   },
 }) => (
-        
+        <Layout>
+          <Helmet title={title} />
         <div>
-            <NavBar />
-            <Helmet title={title} />
             <div>
                 <Heading color="dark">Tags</Heading>
                 <ul>
@@ -34,6 +33,7 @@ const TagsPage = ({
                 </ul>
             </div>
         </div>
+        </Layout>
     )
 
 TagsPage.propTypes = {

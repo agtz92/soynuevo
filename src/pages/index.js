@@ -1,16 +1,16 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Heading from "../components/heading"
-import NavBar from "../components/navbar"
 import SimpleSlider from "../components/slider"
 import PostBlock from "../components/postblock"
 import Blockcontainer from "../components/blocksContainer"
+import Layout from "../layouts/layout"
 
 export default function Home({data}) {
   return (
     
     <React.Fragment>
-    <NavBar />
+    <Layout>
     <SimpleSlider/>
     <Heading color="dark" >Ver categorías</Heading>
       <h2 className="heading-categoria" >Pesca</h2>
@@ -71,7 +71,7 @@ export default function Home({data}) {
       <h2 className="heading-categoria" >Carpintería </h2>
       <Blockcontainer>
         {data.allMarkdownRemark.edges.map(({ node }) => {
-          if (node.frontmatter.categoria.includes('Carpinteria')) {
+          if (node.frontmatter.categoria.includes('Carpintería')) {
             return (
               <Link key={node.id} to={node.frontmatter.slug}>
                 <PostBlock name={node.frontmatter.title} text={node.frontmatter.short_description} nivel={node.frontmatter.dificultad} background={node.frontmatter.featuredimage} />
@@ -110,6 +110,7 @@ export default function Home({data}) {
           }
         })}
       </Blockcontainer>
+      </Layout>
     </React.Fragment>
 
     
