@@ -28,7 +28,7 @@ export default function Template({
                   "@type": "BlogPosting",
                   "mainEntityOfPage": {
                     "@type": "WebPage",
-                    "@id":"\"" +  ${perro} +"\""
+                    "@id":"\""   ${perro} "\""
                   },
                   "headline": ${frontmatter.title},
                   "description": ${frontmatter.short_description},
