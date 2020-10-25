@@ -16,7 +16,7 @@ export default function Template({
 }) {
     const { markdownRemark } = data // data.markdownRemark holds your post data
     const { frontmatter } = markdownRemark
-    const perro = "https://www.soy-nuevo.com" + frontmatter.title;
+    const perro = "https://www.soy-nuevo.com/" + frontmatter.slug + "/";
         return (
           
             <React.Fragment>
