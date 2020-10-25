@@ -21,6 +21,7 @@ export default function Template({
           
             <React.Fragment>
               <Helmet title={frontmatter.title}>
+                <meta name="description" content={frontmatter.short_description}/>
                 <script type="application/ld+json">
                   {`
                 {
@@ -32,7 +33,7 @@ export default function Template({
                   },
                   "headline": \"${frontmatter.title}\",
                   "description": \"${frontmatter.short_description}\",
-                  "image": \"https://goofy-tereshkova-e4b6bf.netlify.app${frontmatter.featuredimage}\",  
+                  "image": "https://goofy-tereshkova-e4b6bf.netlify.app${frontmatter.featuredimage}",  
                   "author": {
                     "@type": "Organization",
                     "name": "soy-nuevo.com"

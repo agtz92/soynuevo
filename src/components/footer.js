@@ -23,26 +23,26 @@ export default function Footer() {
                     <div>
                     <h2 className="footer-heading">Heading Label</h2>
                     <ul  className="list-footer w-list-unstyled">
-                        <li ><Link className="footer-link">Text Link</Link></li>
-                        <li ><Link className="footer-link">Text Link</Link></li>
-                        <li ><Link className="footer-link">Text Link</Link></li>
-                        <li ><Link className="footer-link">Text Link</Link></li>
-                        <li ><Link className="footer-link">Text Link</Link></li>
+                        <li ><Link  to="/"  to="/" className="footer-link">Text Link</Link></li>
+                        <li ><Link  to="/"  className="footer-link">Text Link</Link></li>
+                        <li ><Link  to="/"  className="footer-link">Text Link</Link></li>
+                        <li ><Link  to="/"  className="footer-link">Text Link</Link></li>
+                        <li ><Link  to="/"  className="footer-link">Text Link</Link></li>
                     </ul>
                     </div>
                     <div>
                     <h2 className="footer-heading">Heading Label</h2>
                     <ul  className="list-footer w-list-unstyled">
-                        <li ><Link className="footer-link">Text Link</Link></li>
-                        <li ><Link className="footer-link">Text Link</Link></li>
+                        <li ><Link  to="/"  className="footer-link">Text Link</Link></li>
+                        <li ><Link  to="/"  className="footer-link">Text Link</Link></li>
                     </ul>
                     </div>
                     <div>
                     <h2 className="footer-heading">Heading Label</h2>
                     <ul  className="list-footer w-list-unstyled">
-                        <li ><Link className="footer-link">Text Link</Link></li>
-                        <li ><Link className="footer-link">Text Link</Link></li>
-                        <li ><Link className="footer-link">Text Link</Link></li>
+                        <li ><Link  to="/"  className="footer-link">Text Link</Link></li>
+                        <li ><Link  to="/"  className="footer-link">Text Link</Link></li>
+                        <li ><Link  to="/"  className="footer-link">Text Link</Link></li>
                     </ul>
                     </div>
                 </div>
