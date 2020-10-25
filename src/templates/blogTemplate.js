@@ -16,7 +16,7 @@ export default function Template({
 }) {
     const { markdownRemark } = data // data.markdownRemark holds your post data
     const { frontmatter } = markdownRemark
-    const perro = "https://www.soy-nuevo.com/" + frontmatter.slug + "/";
+    const perro = "https://goofy-tereshkova-e4b6bf.netlify.app/" + frontmatter.slug + "/";
         return (
           
             <React.Fragment>
@@ -32,7 +32,7 @@ export default function Template({
                   },
                   "headline": ${frontmatter.title},
                   "description": ${frontmatter.short_description},
-                  "image": ${frontmatter.featuredimage},  
+                  "image": "https://goofy-tereshkova-e4b6bf.netlify.app/" + ${frontmatter.featuredimage},  
                   "author": {
                     "@type": "Organization",
                     "name": "soy-nuevo.com"
@@ -42,7 +42,7 @@ export default function Template({
                     "name": "soy-nuevo",
                     "logo": {
                       "@type": "ImageObject",
-                      "url": ${logoChico}
+                      "url": "https://goofy-tereshkova-e4b6bf.netlify.app/" + ${logoChico}
                     }
                   },
                   "datePublished": ${frontmatter.date},
