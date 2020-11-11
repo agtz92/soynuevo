@@ -8,13 +8,11 @@ import '../../node_modules/slick-carousel/slick/slick-theme.css'
 export default class Blockcontainer extends Component {
     render() {
         //settings react slick
-        const tri = React.Children.count;
-        console.log(tri);
         const settings = {
             dots: true,
             infinite: true,
             speed: 500,
-            slidesToShow: 5,
+            slidesToShow: 4,
             slidesToScroll: 3,
             autoplay: false,
             responsive: [
