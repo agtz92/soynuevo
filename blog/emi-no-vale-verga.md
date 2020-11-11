@@ -4,7 +4,7 @@ slug: emi-no-vale-verga
 featuredimage: /assets/silly_husky.jpg
 date: 2020-11-11T05:17:55.335Z
 dificultad: Experto
-categoria: Coctelería
+categoria: Acampar
 tags:
   - emi
   - no
