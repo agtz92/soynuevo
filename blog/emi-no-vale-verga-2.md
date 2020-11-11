@@ -4,7 +4,7 @@ slug: emi-no-vale-verga-3
 featuredimage: /assets/silly_husky.jpg
 date: 2020-11-11T05:44:55.685Z
 dificultad: Experto
-categoria: Asar
+categoria: Acampar
 tags:
   - emi
   - no
@@ -13,12 +13,7 @@ tags:
 short-description: >-
   Platica con las personas de la importancia de utilizar el tapete sanitizante y
   pon un letrero indicando el uso obligatorio del sanitizante de calzado.
-
-
-  Reemplaza constantemente el líquido sanitizante para incrementar su efectividad, utiliza un líquido especial para tapetes sanitizantes[como este que nosotros recomendamos.](https://www.tapetedehulesanitizante.com/liquido-desinfectante-para-tapetes-sanitizantes)
-
-
-  Utiliza soluciones sanitizantes que duren más tiempo. La desventaja de utilizar cloro con agua es que el cloro pierde su efectividad muy rápidame
+  Reemplaza constantemente el líquido sanitizante para incrementar su efectividad
 ---
 # ¿Cómo mejorar las medidas de limpieza en un área?
 

@@ -8,6 +8,10 @@ categoria: Pesca
 tags:
   - pince husky vergas
   - husky
+short-description: >-
+  Platica con las personas de la importancia de utilizar el tapete sanitizante y
+  pon un letrero indicando el uso obligatorio del sanitizante de calzado.
+  Reemplaza constantemente el líquido sanitizante para incrementar su efectividad
 ---
 Bacon ipsum dolor amet ground round cupim jerky tail. Brisket jerky strip steak beef ribs porchetta tri-tip. Capicola buffalo beef boudin, filet mignon prosciutto sirloin tenderloin swine fatback chislic ham hock venison pork chop. Turducken tongue biltong ball tip. Tongue porchetta pig tenderloin bresaola shankle t-bone jerky. Sausage jowl spare ribs kielbasa ribeye, tail picanha drumstick.
 

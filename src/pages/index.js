@@ -13,10 +13,10 @@ export default function Home({data}) {
     <Layout>
     <SimpleSlider/>
     <Link to="/categorias/"><Heading color="dark" >Ver categorías</Heading></Link>
-      <Link to="/categorias/pesca/"><h2 className="heading-categoria" >Pesca</h2></Link>
+      <Link to="/categorias/asar/"><h2 className="heading-categoria" >Asar</h2></Link>
       <Blockcontainer>
         {data.allMarkdownRemark.edges.map(({ node }) => {
-          if(node.frontmatter.categoria.includes('Pesca')){ return(
+          if(node.frontmatter.categoria.includes('Asar')){ return(
             <Link key={node.id} to={node.frontmatter.slug}>
               <PostBlock name={node.frontmatter.title} text={node.frontmatter.short_description} nivel={node.frontmatter.dificultad} background={node.frontmatter.featuredimage} />
           </Link>)
@@ -26,10 +26,10 @@ export default function Home({data}) {
           }
         })}
       </Blockcontainer>
-      <Link to="/categorias/acampar/"><h2 className="heading-categoria" >Acampar</h2></Link>
+      <Link to="/categorias/pesca/"><h2 className="heading-categoria" >Pesca</h2></Link>
       <Blockcontainer>
         {data.allMarkdownRemark.edges.map(({ node }) => {
-          if (node.frontmatter.categoria.includes('Acampar')) {
+          if (node.frontmatter.categoria.includes('Pesca')) {
             return (
               <Link key={node.id} to={node.frontmatter.slug}>
                 <PostBlock name={node.frontmatter.title} text={node.frontmatter.short_description} nivel={node.frontmatter.dificultad} background={node.frontmatter.featuredimage} />
@@ -40,14 +40,13 @@ export default function Home({data}) {
           }
         })}
       </Blockcontainer>
-      <Link to="/categorias/asar/"><h2 className="heading-categoria" >Asar</h2></Link>
+      <Link to="/categorias/acampar/"><h2 className="heading-categoria" >Acampar</h2></Link>
       <Blockcontainer>
         {data.allMarkdownRemark.edges.map(({ node }) => {
-          if (node.frontmatter.categoria.includes('Asar')) {
-            return (
-              <Link key={node.id} to={node.frontmatter.slug}>
-                <PostBlock name={node.frontmatter.title} text={node.frontmatter.short_description} nivel={node.frontmatter.dificultad} background={node.frontmatter.featuredimage} />
-              </Link>)
+          if(node.frontmatter.categoria.includes('Acampar')){ return(
+            <Link key={node.id} to={node.frontmatter.slug}>
+              <PostBlock name={node.frontmatter.title} text={node.frontmatter.short_description} nivel={node.frontmatter.dificultad} background={node.frontmatter.featuredimage} />
+          </Link>)
           }else
           {
             return (null)

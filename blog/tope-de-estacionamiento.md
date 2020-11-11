@@ -4,7 +4,7 @@ slug: tope-estacionamiento
 featuredimage: /assets/acampar.jpg
 date: 2020-10-25T01:35:41.431Z
 dificultad: Fácil
-categoria: Carpintería
+categoria: Pesca
 tags:
   - tope
   - estacionamiento
