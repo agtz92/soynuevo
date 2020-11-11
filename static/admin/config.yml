@@ -37,3 +37,4 @@ collections:
     slug: "{{slug}}"
     fields:
       - {widget: string, name: categoria, label: Categoria, required: true, hint: Categoria principal }
+      - {label: "Category Image", name: "categoryimage", widget: image}

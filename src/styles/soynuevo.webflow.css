@@ -699,6 +699,11 @@ ul li
   background-position: 50% 50%;
   background-size: cover;
 }
+.div-block-categoria {
+  height: 30vh;
+  background-position: 50% 50%;
+  background-size: cover;
+}
 
 .div-block-11 {
   display: -webkit-box;

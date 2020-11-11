@@ -44,7 +44,7 @@ render(){
                 </Link>
                 <nav role="navigation" className="w-nav-menu" >
                     <Link to="/" className="nav-link w-nav-link" activeClassName="w--current">Inicio</Link>
-                    <Link to="/about/" className="nav-link w-nav-link" activeClassName="w--current">Actividades en Interiores</Link>
+                    <Link to="/categorias/" className="nav-link w-nav-link" activeClassName="w--current">Categorías</Link>
                     <Link to="/" className="nav-link w-nav-link" activeClassName="w--current">Actividades en Exteriores</Link>
                     <Link to="/" className="nav-link w-nav-link" activeClassName="w--current">Contacto</Link>
                     
@@ -57,7 +57,7 @@ render(){
             <div className={'w-nav-overlay mobileNav '  + (this.state.isToggleOn ? 'showing' : 'not-showing')} data-wf-ignore="" id="w-nav-overlay-0">
                 <nav role="navigation" className="w-nav-menu" style={navStyle} data-nav-menu-open="">
                     <Link to="/" className="nav-link w-nav-link w--nav-link-open" activeClassName="w--current">Inicio</Link>
-                    <Link to="/about/" className="nav-link w-nav-link w--nav-link-open" activeClassName="w--current">Actividades en Interiores</Link>
+                    <Link to="/categorias/" className="nav-link w-nav-link w--nav-link-open" activeClassName="w--current">Categorías</Link>
                     <Link to="/" className="nav-link w-nav-link w--nav-link-open" activeClassName="w--current">Actividades en Exteriores</Link>
                     <Link to="/" className="nav-link w-nav-link w--nav-link-open" activeClassName="w--current">Contacto</Link>
                 </nav>
