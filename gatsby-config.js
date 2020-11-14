@@ -8,6 +8,13 @@ module.exports = {
         path: `${__dirname}/blog`,
       },
     },
+    /*{
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `categs`,
+        path: `${__dirname}/cms/categorias`,
+      },
+    },*/
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {

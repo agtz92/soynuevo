@@ -289,6 +289,26 @@ position: absolute;
 {
     content: '→';
 }
+.category-header {
+  position: relative;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.category-text {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.heading.center {
+  text-align: center;
+}
+.text-block-2 {
+  text-align: center;
+}
+
+.text-block-2.white {
+  color: #f3f3f3;
+}
 [dir='rtl'] .slick-next:before
 {
     content: '←';
@@ -392,6 +412,15 @@ position: absolute;
   line-height: 1em;
   text-transform: uppercase;
   z-index: 5;
+}
+.heading.center {
+  text-align: center!important;
+}
+.heading.left {
+  text-align: left!important;
+}
+.heading.right {
+  text-align: right!important;
 }
 .heading.dark {
   padding-bottom: 10px;

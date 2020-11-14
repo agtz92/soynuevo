@@ -2,23 +2,38 @@ import React from "react"
 import PropTypes from "prop-types"
 import Layout from "../layouts/layout"
 import PostBlockLarge from "../components/postblocklarge"
+import CategoryHeader from "../components/categoryHeader"
+
 
 // Components
 import { Link, graphql } from "gatsby"
 
+const imageMapper ={
+  Pesca: require("../images/slider/pesca.jpg"),
+  Acampar: require("../images/slider/acampar.jpg"),
+  Carpintería: require("../images/slider/carpinteria.jpg"),
+  Coctelería: require("../images/slider/cocteleria.jpg"),
+  Jardinería: require("../images/slider/jardineria.jpg"),
+  Cocinar: require("../images/slider/cocinar.jpg"),
+  Asar: require("../images/slider/asar.jpg")
+}
+
 const Categorias = ({ pageContext, data }) => {
     const { categoria } = pageContext
     const { edges, totalCount } = data.allMarkdownRemark
-    const categoriaHeader = `${totalCount} post${
-        totalCount === 1 ? "" : "s"
+    const categoriaHeader = `${totalCount} tutorial${
+        totalCount === 1 ? "" : "es"
         } en la categoría de "${categoria}"`
 
     return (
         
         <Layout>
             <div>
-                
-            <h1>{categoriaHeader}</h1>
+            <CategoryHeader background={imageMapper[categoria]} category={categoria} descripcion={categoriaHeader} />  
+            
+
+
+
             <ul className="list-posts">
                 {edges.map(({ node }) => {
                     const { slug } = node.frontmatter

@@ -3,15 +3,26 @@ import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
 import Heading from "../components/heading"
 import Layout from "../layouts/layout"
+import CategoriesBlock from "../components/categoriesBlock"
 // Utilities
 import kebabCase from "lodash/kebabCase"
 
 // Components
 import { Helmet } from "react-helmet"
 
+const imageMapper ={
+  Pesca: require("../images/slider/pesca.jpg"),
+  Acampar: require("../images/slider/acampar.jpg"),
+  Carpintería: require("../images/slider/carpinteria.jpg"),
+  Coctelería: require("../images/slider/cocteleria.jpg"),
+  Jardinería: require("../images/slider/jardineria.jpg"),
+  Cocinar: require("../images/slider/cocinar.jpg"),
+  Asar: require("../images/slider/asar.jpg")
+}
+
 const CategoriasPage = ({
   data: {
-    allMarkdownRemark: { group },
+    allMarkdownRemark: { group},
     site: {
       siteMetadata: { title },
     },
@@ -22,15 +33,16 @@ const CategoriasPage = ({
         <div>
             <div>
                 <Heading color="dark">Todas las Categorías</Heading>
-                <ul>
+                <div>
                     {group.map(categoria => (
                         <li key={categoria.fieldValue}>
                             <Link to={`/categorias/${kebabCase(categoria.fieldValue)}/`}>
-                                {categoria.fieldValue} ({categoria.totalCount})
-            </Link>
+                                <CategoriesBlock name={categoria.fieldValue} count={categoria.totalCount} background={imageMapper[categoria.fieldValue]} />
+                            </Link>
                         </li>
+                        
                     ))}
-                </ul>
+                </div>
             </div>
         </div>
         </Layout>
@@ -58,16 +70,16 @@ export default CategoriasPage
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(limit: 2000) {
-      group(field: frontmatter___categoria) {
-        fieldValue
-        totalCount
-      }
+  site {
+    siteMetadata {
+      title
     }
   }
+  allMarkdownRemark(limit: 2000) {
+    group(field: frontmatter___categoria) {
+      fieldValue
+      totalCount
+    }
+  }
+}
 `

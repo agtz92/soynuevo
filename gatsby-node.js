@@ -8,6 +8,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     const tagTemplate = path.resolve("./src/templates/tags.js")
     const categoriaTemplate = path.resolve("./src/templates/categorias.js")
 
+    //add filter: {fileAbsolutePath: {regex: "/blog/"}} to create new source file systems
     const result = await graphql(`
    {
   postsRemark: allMarkdownRemark(
@@ -44,6 +45,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
 
     const posts = result.data.postsRemark.edges
+    
 
     // Create post detail pages
     posts.forEach(({ node }) => {
@@ -56,7 +58,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             },
         })
     })
-
+    
     // Extract tag data from tags query
     const tags = result.data.tagsGroup.group
 
@@ -74,7 +76,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     // Extract tag data from categories query
     const categories = result.data.categoriesGroup.group
 
-    // Make tag pages
+    // Make category pages
     categories.forEach(categoria => {
         createPage({
             path: `/categorias/${_.kebabCase(categoria.fieldValue)}/`,

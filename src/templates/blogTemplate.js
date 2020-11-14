@@ -84,7 +84,10 @@ export default function Template({
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+    markdownRemark(
+      fileAbsolutePath: {regex: "/blog/"}
+      frontmatter: { slug: { eq: $slug } }
+      ) {
       html
       frontmatter {
         date(formatString: "DD MMMM, YYYY")
