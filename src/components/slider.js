@@ -51,7 +51,7 @@ export default class SimpleSlider extends Component{
                 <Slider {...settings}>
                     <React.Fragment>
                         <Slide
-                            to="/"
+                            to="/categorias/asar/"
                             background={bg[0]}
                             title="¿Cómo asar en parrilla?"
                             text="LOREM IPSUM MOTHERFUCKER"
@@ -59,7 +59,7 @@ export default class SimpleSlider extends Component{
                     </React.Fragment>
                     <React.Fragment>
                         <Slide
-                            to="/about/"
+                            to="/categorias/pesca/"
                             background={bg[1]}
                             title="¿Cómo Pescar?"
                             text="LOREM IPSUM MOTHERFUCKERsss"
@@ -67,7 +67,7 @@ export default class SimpleSlider extends Component{
                     </React.Fragment>
                     <React.Fragment>
                         <Slide
-                            to="/"
+                            to="/categorias/acampar/"
                             background={bg[2]}
                             title="¿Cómo acampar?"
                             text="LOREM IPSUM MOTHERFUCKERsss"
@@ -75,7 +75,7 @@ export default class SimpleSlider extends Component{
                     </React.Fragment>
                     <React.Fragment>
                         <Slide
-                            to="/"
+                            to="/categorias/carpinteria/"
                             background={bg[3]}
                             title="¿Cómo hacer carpinteria?"
                             text="LOREM IPSUM MOTHERFUCKERsss"
@@ -83,7 +83,7 @@ export default class SimpleSlider extends Component{
                     </React.Fragment>
                     <React.Fragment>
                         <Slide
-                            to="/"
+                            to="/categorias/cocinar/"
                             background={bg[4]}
                             title="¿Cómo cocinar?"
                             text="LOREM IPSUM MOTHERFUCKERsss"
@@ -91,7 +91,7 @@ export default class SimpleSlider extends Component{
                     </React.Fragment>
                     <React.Fragment>
                         <Slide
-                            to="/"
+                            to="/categorias/cocteleria/"
                             background={bg[5]}
                             title="¿Cómo hacer coctéles?"
                             text="LOREM IPSUM MOTHERFUCKERsss"
@@ -99,7 +99,7 @@ export default class SimpleSlider extends Component{
                     </React.Fragment>
                     <React.Fragment>
                         <Slide
-                            to="/"
+                            to="/categorias/jardineria/"
                             background={bg[6]}
                             title="¿Cómo hacer jardinería?"
                             text="LOREM IPSUM MOTHERFUCKERsss"
