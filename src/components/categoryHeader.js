@@ -11,7 +11,7 @@ export default function CategoryHeader(props) {
         <div className="category-header" style={{ backgroundImage: `url(${props.background})` }}>
             <div className="blackoverlay"></div>
             <div className="category-text">
-            <Heading color="gold" alignment="center">Soy nuevo en {props.category}</Heading>
+            <Heading color="gold" alignment="center">Aprende algo nuevo en {props.category}</Heading>
             <div className="text-block-2 white">{props.descripcion}</div>
             </div>
         </div>

@@ -21,13 +21,14 @@ export default function Footer() {
                 />
                 </Link>
                     <div>
-                    <h2 className="footer-heading">Heading Label</h2>
+                    <h2 className="footer-heading">Todas las categorías</h2>
                     <ul  className="list-footer w-list-unstyled">
-                        <li ><Link  to="/"  to="/" className="footer-link">Text Link</Link></li>
-                        <li ><Link  to="/"  className="footer-link">Text Link</Link></li>
-                        <li ><Link  to="/"  className="footer-link">Text Link</Link></li>
-                        <li ><Link  to="/"  className="footer-link">Text Link</Link></li>
-                        <li ><Link  to="/"  className="footer-link">Text Link</Link></li>
+                        <li ><Link  to="/categorias/asar/"  className="footer-link">¿Cómo Asar en Parrilla?</Link></li>
+                        <li ><Link  to="/categorias/acampar/"  className="footer-link">¿Cómo Acampar?</Link></li>
+                        <li ><Link  to="/categorias/pesca/"  className="footer-link">¿Cómo Pescar?</Link></li>
+                        <li ><Link  to="/categorias/cocinar/"  className="footer-link">¿Cómo Cocinar?</Link></li>
+                        <li ><Link  to="/categorias/carpinteria/"  className="footer-link">¿Cómo hacer Carpintería?</Link></li>
+                        <li ><Link  to="/categorias/cocteleria/"  className="footer-link">¿Cómo hacer Coctelería?</Link></li>
                     </ul>
                     </div>
                     <div>
@@ -46,7 +47,8 @@ export default function Footer() {
                     </ul>
                     </div>
                 </div>
-                <div className="text-bottom-footer">Copyright © 2020 My Company. All rights reserved.</div>
+                <div className="text-bottom-footer">Copyright © 2020 soy-nuevo.com . Todos los derechos reservados.</div>
+                <div className="text-bottom-footer">Texto de partner Amazon</div>
                 </div>
         </footer>
     );

@@ -12,8 +12,8 @@ export default function Home({data}) {
     <React.Fragment>
     <Layout>
     <SimpleSlider/>
-    <Link to="/categorias/"><Heading color="dark" >Ver categorías</Heading></Link>
-      <Link to="/categorias/asar/"><h2 className="heading-categoria" >Asar</h2></Link>
+    <Link to="/categorias/"><Heading color="dark" >Aprende algo nuevo en: </Heading></Link>
+      <Link to="/categorias/asar/"><h2 className="heading-categoria" >Ver todo en ¿Cómo Asar en Parrilla? {">"}</h2></Link>
       <Blockcontainer>
         {data.allMarkdownRemark.edges.map(({ node }) => {
           if(node.frontmatter.categoria.includes('Asar')){ return(
@@ -26,7 +26,7 @@ export default function Home({data}) {
           }
         })}
       </Blockcontainer>
-      <Link to="/categorias/pesca/"><h2 className="heading-categoria" >Pesca</h2></Link>
+      <Link to="/categorias/pesca/"><h2 className="heading-categoria" >Ver todo en ¿Cómo Pescar? {">"}</h2></Link>
       <Blockcontainer>
         {data.allMarkdownRemark.edges.map(({ node }) => {
           if (node.frontmatter.categoria.includes('Pesca')) {
@@ -40,7 +40,7 @@ export default function Home({data}) {
           }
         })}
       </Blockcontainer>
-      <Link to="/categorias/acampar/"><h2 className="heading-categoria" >Acampar</h2></Link>
+      <Link to="/categorias/acampar/"><h2 className="heading-categoria" >Ver todo en ¿Cómo Acampar? {">"}</h2></Link>
       <Blockcontainer>
         {data.allMarkdownRemark.edges.map(({ node }) => {
           if(node.frontmatter.categoria.includes('Acampar')){ return(
@@ -53,7 +53,7 @@ export default function Home({data}) {
           }
         })}
       </Blockcontainer>
-      <Link to="/categorias/jardineria/"><h2 className="heading-categoria" >Jardinería</h2></Link>
+      <Link to="/categorias/jardineria/"><h2 className="heading-categoria" >Ver todo en ¿Cómo hacer Jardinería? {">"}</h2></Link>
       <Blockcontainer>
         {data.allMarkdownRemark.edges.map(({ node }) => {
           if (node.frontmatter.categoria.includes('Jardinería')) {
@@ -67,7 +67,7 @@ export default function Home({data}) {
           }
         })}
       </Blockcontainer>
-      <Link to="/categorias/carpinteria/"><h2 className="heading-categoria" >Carpintería</h2></Link>
+      <Link to="/categorias/carpinteria/"><h2 className="heading-categoria" >Ver todo en ¿Cómo hacer Carpintería? {">"}</h2></Link>
       <Blockcontainer>
         {data.allMarkdownRemark.edges.map(({ node }) => {
           if (node.frontmatter.categoria.includes('Carpintería')) {
@@ -81,7 +81,7 @@ export default function Home({data}) {
           }
         })}
       </Blockcontainer>
-      <Link to="/categorias/cocinar/"><h2 className="heading-categoria" >Cocinar</h2></Link>
+      <Link to="/categorias/cocinar/"><h2 className="heading-categoria" >Ver todo en ¿Cómo Cocinar? {">"}</h2></Link>
       <Blockcontainer>
         {data.allMarkdownRemark.edges.map(({ node }) => {
           if (node.frontmatter.categoria.includes('Cocinar')) {
@@ -95,7 +95,7 @@ export default function Home({data}) {
           }
         })}
       </Blockcontainer>
-      <Link to="/categorias/cocteleria/"><h2 className="heading-categoria" >Coctelería</h2></Link>
+      <Link to="/categorias/cocteleria/"><h2 className="heading-categoria" >Ver todo en ¿Cómo hacer Coctelería? {">"}</h2></Link>
       <Blockcontainer>
         {data.allMarkdownRemark.edges.map(({ node }) => {
           if (node.frontmatter.categoria.includes('Coctelería')) {
