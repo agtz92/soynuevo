@@ -71,7 +71,7 @@ export default function Template({
                             <p className="parpost">{frontmatter.short_description}</p>
                         </div>
                     </div>
-                    <div className="div-text-post"><p className="parpost">{markdownRemark.html}</p></div>
+                    <div className="div-text-post">{markdownRemark.html}</div>
                 </div>
                 <div className="div-grey-post"></div>
             </div>
