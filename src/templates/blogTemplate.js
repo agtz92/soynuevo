@@ -15,7 +15,7 @@ export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
     const { markdownRemark } = data // data.markdownRemark holds your post data
-    const { frontmatter } = markdownRemark
+    const { frontmatter, html } = markdownRemark
     const perro = "https://goofy-tereshkova-e4b6bf.netlify.app/" + frontmatter.slug + "/";
         return (
           
@@ -71,7 +71,7 @@ export default function Template({
                             <p className="parpost">{frontmatter.short_description}</p>
                         </div>
                     </div>
-                    <div className="div-text-post">{markdownRemark.html}</div>
+                    <div className="div-text-post" dangerouslySetInnerHTML={{ __html: html }}/>
                 </div>
                 <div className="div-grey-post"></div>
             </div>
