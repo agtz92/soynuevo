@@ -36,6 +36,7 @@ render(){
                 <Link to="/"><img
                     loading="lazy"
                     width="50"
+                    height="auto"
                     srcSet={logoChico}
                     sizes="50px"
                     alt="soynuevologo"
