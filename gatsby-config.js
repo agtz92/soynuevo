@@ -1,12 +1,19 @@
 module.exports = {
   plugins: [
-    `gatsby-plugin-netlify-cms`,
+    
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-pages`,
         path: `${__dirname}/blog`,
       },
+    },
+    {
+            resolve: `gatsby-source-filesystem`,
+                options: {
+                    path: `${__dirname}/static/assets`,
+                    name: 'images',
+                },
     },
     /*{
       resolve: `gatsby-source-filesystem`,
@@ -23,9 +30,23 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
-    `gatsby-transformer-remark`,
+    {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+                plugins: [
+                    'gatsby-remark-relative-images',
+                    {
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 590,
+                        },
+                    },
+                ],
+            },
+    },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-netlify-cms`
   ]
 }
