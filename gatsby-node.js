@@ -7,7 +7,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     const blogPostTemplate = path.resolve("./src/templates/blogTemplate.js")
     const tagTemplate = path.resolve("./src/templates/tags.js")
     const categoriaTemplate = path.resolve("./src/templates/categorias.js")
-    const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
     //add filter: {fileAbsolutePath: {regex: "/blog/"}} to create new source file systems
     const result = await graphql(`
@@ -46,7 +45,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
 
     const posts = result.data.postsRemark.edges
-    
 
     // Create post detail pages
     posts.forEach(({ node }) => {

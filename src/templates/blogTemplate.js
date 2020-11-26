@@ -89,8 +89,6 @@ export const pageQuery = graphql`
       frontmatter: { slug: { eq: $slug } }
       ) {
       html
-      rawMarkdownBody
-      htmlAst
       frontmatter {
         date(formatString: "DD MMMM, YYYY")
         slug
