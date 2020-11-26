@@ -12,6 +12,4 @@ short-description: que pedal
 ---
 que pinche pedo
 
-
-
-![pesca](/assets/pesca.jpg "delapesca")
+![pesca](/assets/romits.jpg "delapesca")
