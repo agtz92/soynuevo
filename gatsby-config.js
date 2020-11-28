@@ -1,6 +1,6 @@
 module.exports = {
   plugins: [
-    `gatsby-plugin-netlify-cms`,
+    
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -15,6 +15,8 @@ module.exports = {
           name: 'images',
                },
     },
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -31,7 +33,7 @@ module.exports = {
               //include: ['featured'],
               // [Optional] Exclude the following fields, use dot notation for nested fields
               // No fields are excluded by default
-              //exclude: ['featured.skip'],
+              exclude: ['featuredimage'],
             },
           },
           {
@@ -56,8 +58,7 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`
   ]
 }
