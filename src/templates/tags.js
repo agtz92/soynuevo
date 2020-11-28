@@ -24,7 +24,7 @@ const Tags = ({ pageContext, data }) => {
                     const { title } = node.frontmatter
                     const { short_description } = node.frontmatter
                     const { dificultad } = node.frontmatter
-                    const { featuredimage } = node.frontmatter
+                    const { featuredimage } = node.frontmatter.featuredimage
                     return (
                         <li key={slug}>
                             <Link to={`/${slug}`}>

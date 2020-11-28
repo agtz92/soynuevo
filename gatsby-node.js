@@ -1,6 +1,19 @@
 const path = require("path")
 const _ = require("lodash")
 
+/*exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = [
+    `type MarkdownRemark implements Node { frontmatter: Frontmatter }`,
+    `type Frontmatter {
+      # you may need to adapt this line depending on the node type and key
+      # that you want to create the relationship for
+      featuredimage: File @link(by: "relativePath")
+    }`
+  ]
+  createTypes(typeDefs)
+}*/
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
     const { createPage } = actions
 
@@ -48,8 +61,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
     // Create post detail pages
     posts.forEach(({ node }) => {
-      
         createPage({
+          
             path: node.frontmatter.slug,
             component: blogPostTemplate,
             context: {

@@ -1,6 +1,15 @@
 module.exports = {
   plugins: [
-    
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
+    {
+      //assets go above everything else to avoid failures when using gatsby-remark-relative-images
+      resolve: `gatsby-source-filesystem`,
+      options: {
+          path: `${__dirname}/static/assets`,
+          name: 'images',
+               },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -8,15 +17,7 @@ module.exports = {
         path: `${__dirname}/blog`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-          path: `${__dirname}/static/assets`,
-          name: 'images',
-               },
-    },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
+    
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -38,7 +39,9 @@ module.exports = {
           },
           {
             resolve: `gatsby-remark-images`,
-            options: { maxWidth: 600 },
+            options: {
+              maxWidth: 590,
+            },
           },
         ],
       },

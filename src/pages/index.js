@@ -6,6 +6,7 @@ import PostBlock from "../components/postblock"
 import Blockcontainer from "../components/blocksContainer"
 import Layout from "../layouts/layout"
 
+
 export default function Home({data}) {
   return (
     
@@ -35,7 +36,7 @@ export default function Home({data}) {
                 <PostBlock name={node.frontmatter.title} text={node.frontmatter.short_description} nivel={node.frontmatter.dificultad} background={node.frontmatter.featuredimage} />
               </Link>)
           }else
-          {
+          { 
             return (null)
           }
         })}
