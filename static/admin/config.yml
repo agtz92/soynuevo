@@ -21,6 +21,7 @@ collections:
       - {label: "Tags", name: "tags", widget: "list", hint: Separar con comas cada tag relacionado al post}
       - { name: short-description, label: Descripcion Corta, widget: markdown, hint: Descripcion corta de al menos 5 líneas}
       - { name: body, label: Body, widget: markdown, mode: rich_text, hint: Estructura debe ser parrafo -> imagen/video -> parrafo -> imagen/video -> parrafo}
+      - {label: “Save as Draft”, name: “draft”, required: false, widget: “boolean”, default: true}
       
      
   - name: dificultad
