@@ -35,10 +35,9 @@ render(){
             <div className="divcontainernavbar">
                 <Link to="/"><img
                     loading="lazy"
-                    width="50"
-                    height="auto"
+                    width="50px"
+                    height="50px"
                     srcSet={logoChico}
-                    sizes="50px"
                     alt="soynuevologo"
                     className="image"
                 />
