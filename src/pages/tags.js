@@ -21,13 +21,13 @@ const TagsPage = ({
           <Helmet title={title} />
         <div>
             <div>
-                <Heading color="dark" alignment="center">Tags</Heading>
+                <Heading color="dark" alignment="center">Todos los Tags</Heading>
                 <ul>
                     {group.map(tag => (
                         <li key={tag.fieldValue}>
                             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                                {tag.fieldValue} ({tag.totalCount})
-            </Link>
+                               <h3>{tag.fieldValue} ({tag.totalCount})</h3> 
+                            </Link>
                         </li>
                     ))}
                 </ul>

@@ -54,7 +54,7 @@ const Categorias = ({ pageContext, data }) => {
               This links to a page that does not yet exist.
               You'll come back to it!
             */} 
-            <Link to="/categorias">Ve todas las categorias</Link>
+            <Link to="/categorias"><h2>Ve todas las categorias</h2></Link>
         </div>
         </Layout>
     )
