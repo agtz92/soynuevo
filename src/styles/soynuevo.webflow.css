@@ -226,7 +226,7 @@ ul li
     border: none;
     outline: none;
     background: transparent;
-    z-index: 20!important;
+    z-index: 21!important;
 }
 .slick-prev:hover,
 .slick-prev:focus,
