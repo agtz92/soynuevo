@@ -13,11 +13,11 @@ export default function Home() {
             <Layout>
             <Heading color="dark" alignment="center">Información del Sitio</Heading>
             <li>
-                <Link to="/privacidad/">
-                    <InfoBlock title="Partners" img={partners} description="Estos negocios mexicanos hacen que este proyecto pueda seguir creciendo"/>
+                <Link to="/partners/">
+                    <InfoBlock title="Partners" img={partners} description="Estos negocios mexicanos hacen que este proyecto pueda seguir creciendo."/>
                 </Link>
                 <Link to="/privacidad/">
-                    <InfoBlock title="Aviso de Privacidad" img={info} description="Consulta nuestra política de privacidad"/>
+                    <InfoBlock title="Aviso de Privacidad" img={info} description="Consulta nuestra política de privacidad."/>
                 </Link>
             </li>
             </Layout>

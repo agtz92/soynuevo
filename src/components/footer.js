@@ -36,7 +36,7 @@ export default function Footer() {
                     <h2 className="footer-heading">Información</h2>
                     <ul  className="list-footer w-list-unstyled">
                         <li ><Link  to="/privacidad/"  className="footer-link">Política de Privacidad</Link></li>
-                        <li ><Link  to="/"  className="footer-link">Text Link</Link></li>
+                        <li ><Link  to="/partners/"  className="footer-link">Directorio de Negocios</Link></li>
                     </ul>
                     </div>
                     <div>

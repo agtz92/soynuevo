@@ -9,7 +9,7 @@ export default function CateogoriesBlock(props) {
             <div className="div-block-9" >
             <div className="div-block-10" style={{ backgroundImage: `url(${props.background})` }}></div>
                 <div className="div-block-12">
-                <h1 className="heading-blog-post">{props.name}</h1>
+                <h2 className="heading-blog-post">{props.name}</h2>
                 <div className="div-block-11">
                         <div>Número de Tutoriales Disponibles: </div>
                         <div>{props.count}</div>
