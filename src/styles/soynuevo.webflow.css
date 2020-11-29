@@ -222,18 +222,18 @@ ul li
 
     cursor: pointer;
 
-    color: transparent;
+    color: gold!important;
     border: none;
     outline: none;
     background: transparent;
-    z-index: 21!important;
+    z-index: 20!important;
 }
 .slick-prev:hover,
 .slick-prev:focus,
 .slick-next:hover,
 .slick-next:focus
 {
-    color: transparent;
+    color: gold;
     outline: none;
     background: transparent;
 }
@@ -262,7 +262,7 @@ position: absolute;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    z-index: 50;
+    z-index: 21!important;
 }
 
 .slick-prev

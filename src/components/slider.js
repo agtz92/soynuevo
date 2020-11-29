@@ -20,13 +20,13 @@ export default class SimpleSlider extends Component{
         //settings react slick
         const settings = {
             dots: true,
-            arrows: false,
             infinite: true,
             speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 5000
+            autoplaySpeed: 5000,
+            arrows: false
         };
         //rendering of slider
         const Slide = props => (

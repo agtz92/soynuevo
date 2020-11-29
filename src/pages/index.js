@@ -5,6 +5,9 @@ import SimpleSlider from "../components/slider"
 import PostBlock from "../components/postblock"
 import Blockcontainer from "../components/blocksContainer"
 import Layout from "../layouts/layout"
+import '../styles/normalize.css'
+import "../styles/webflow.css"
+import "../styles/soynuevo.webflow.css"
 
 
 export default function Home({data}) {
@@ -13,7 +16,8 @@ export default function Home({data}) {
     <React.Fragment>
     <Layout>
     <SimpleSlider/>
-    <Link to="/categorias/"><Heading color="dark" >Aprende algo nuevo en: </Heading></Link>
+    <div style={{marginLeft: "2%", marginRight: "2%"}}>
+      <Link to="/categorias/"><Heading color="dark" >Aprende algo nuevo en: </Heading></Link>
       <Link to="/categorias/asar/"><h2 className="heading-categoria" style={{color:"black"}}>Ve todo en ¿Cómo Asar en Parrilla? {">"}</h2></Link>
       <Blockcontainer>
         {data.allMarkdownRemark.edges.map(({ node }) => {
@@ -110,6 +114,7 @@ export default function Home({data}) {
           }
         })}
       </Blockcontainer>
+      </div>
       </Layout>
     </React.Fragment>
 
