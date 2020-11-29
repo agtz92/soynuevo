@@ -258,7 +258,7 @@ ul li
     line-height: 1;
 
     opacity: .75;
-    color: gold!important;
+    color: gold;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -932,7 +932,7 @@ ul li
     background-position: 50% 50%;
     background-size: cover;
   }
-  .slick-next:before
+  .slick-next:before, .slick-prev:before
 {
     font-family: 'slick';
     font-size: 40px;
