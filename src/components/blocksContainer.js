@@ -10,9 +10,9 @@ export default class Blockcontainer extends Component {
         //settings react slick
         const settings = {
             dots: true,
+            arrows: true,
             infinite: true,
             speed: 500,
-            arrows: true,
             slidesToShow: 4,
             slidesToScroll: 3,
             autoplay: false,
@@ -46,7 +46,7 @@ export default class Blockcontainer extends Component {
         const styles = {
             width:"100%",
             overflow: "visible",
-            padding:"0 20px 0 20px"
+            padding:"0 10px 0 10px"
         };
        
         return (
