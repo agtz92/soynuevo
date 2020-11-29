@@ -40,7 +40,7 @@ const Categorias = ({ pageContext, data }) => {
                     const { title } = node.frontmatter
                     const { short_description } = node.frontmatter
                     const { dificultad } = node.frontmatter
-                    const { featuredimage } = node.frontmatter.featuredimage
+                    const { featuredimage } = node.frontmatter
                     return (
                         <li key={slug}>
                             <Link to={`/${slug}`}>
