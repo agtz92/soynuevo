@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import Layout from "../layouts/layout"
 import PostBlockLarge from "../components/postblocklarge"
@@ -18,6 +19,9 @@ const imageMapper ={
   Asar: require("../images/slider/asar.jpg")
 }
 
+function fix_image_path(image_path){
+  return image_path.startsWith("../static/assets/") ? image_path.slice(17) : image_path
+}
 const Categorias = ({ pageContext, data }) => {
     const { categoria } = pageContext
     const { edges, totalCount } = data.allMarkdownRemark
@@ -26,14 +30,14 @@ const Categorias = ({ pageContext, data }) => {
         } en la categoría de "${categoria}"`
 
     return (
-        
+      <React.Fragment>
+        <Helmet title="Tutoriales de todos los temas | Categorias">
+                <meta name="description" content="Ve todos nuestros tutoriales y conviertete en experto"/>
+      </Helmet>
         <Layout>
             <div>
-            <CategoryHeader background={imageMapper[categoria]} category={categoria} descripcion={categoriaHeader} />  
+            <CategoryHeader background={imageMapper[(categoria).split(' ').join('')]} category={categoria} descripcion={categoriaHeader} />  
             
-
-
-
             <ul className="list-posts">
                 {edges.map(({ node }) => {
                     const { slug } = node.frontmatter
@@ -44,7 +48,7 @@ const Categorias = ({ pageContext, data }) => {
                     return (
                         <li key={slug}>
                             <Link to={`/${slug}`}>
-                                <PostBlockLarge title={title} img={featuredimage} nivel={dificultad} description={short_description}/>
+                                <PostBlockLarge title={title} img={`/assets/${fix_image_path(featuredimage)}`} nivel={dificultad} description={short_description}/>
                             </Link>
                         </li>
                     )
@@ -54,9 +58,10 @@ const Categorias = ({ pageContext, data }) => {
               This links to a page that does not yet exist.
               You'll come back to it!
             */} 
-            <Link to="/categorias"><h2>Ve todas las categorias</h2></Link>
+            <Link to="/categorias" ><div className="div-tag marginbottom">Ve todas las categorias</div></Link>
         </div>
         </Layout>
+        </React.Fragment>
     )
 }
 

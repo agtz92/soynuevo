@@ -1,7 +1,7 @@
 ---
 title: Emi no vale verga
 slug: emi-no-vale-verga
-featuredimage: /assets/silly_husky.jpg
+featuredimage: silly_husky.jpg
 date: 2020-11-11T05:17:55.335Z
 dificultad: Experto
 categoria: Acampar

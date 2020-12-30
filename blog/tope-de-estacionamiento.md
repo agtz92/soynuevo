@@ -1,7 +1,7 @@
 ---
 title: Tope de estacionamiento
 slug: tope-estacionamiento
-featuredimage: /assets/acampar.jpg
+featuredimage: acampar.jpg
 date: 2020-10-25T01:35:41.431Z
 dificultad: Fácil
 categoria: Pesca

@@ -1,7 +1,7 @@
 ---
 title: Perron
 slug: perro-n
-featuredimage: /assets/silly_husky.jpg
+featuredimage: silly_husky.jpg
 date: 2020-10-20T06:17:39.895Z
 dificultad: Fácil
 categoria: Pesca

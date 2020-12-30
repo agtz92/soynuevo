@@ -1,10 +1,16 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import Layout from "../layouts/layout"
 import PostBlockLarge from "../components/postblocklarge"
 
 // Components
 import { Link, graphql } from "gatsby"
+
+function fix_image_path(image_path){
+    return image_path.startsWith("../static/assets/") ? image_path.slice(17) : image_path
+}
+
 
 const Tags = ({ pageContext, data }) => {
     const { tag } = pageContext
@@ -14,7 +20,12 @@ const Tags = ({ pageContext, data }) => {
         } con la etiqueta "${tag}"`
 
     return (
-        
+        <React.Fragment>
+            <Helmet >
+                <meta charSet="utf-8" />
+                <title>{`AntesDelExamen | Temas de examen relacionado con ${tag}`}</title>
+                <meta name="description" content={`Temas con la etiqueta ${tag}`} />
+        </Helmet>
         <Layout>
             <div>
             <h1>{tagHeader}</h1>
@@ -28,19 +39,16 @@ const Tags = ({ pageContext, data }) => {
                     return (
                         <li key={slug}>
                             <Link to={`/${slug}`}>
-                                <PostBlockLarge title={title} img={featuredimage} nivel={dificultad} description={short_description}/>
+                                <PostBlockLarge title={title} img={`/assets/${fix_image_path(featuredimage)}`} nivel={dificultad} description={short_description}/>
                             </Link>
                         </li>
                     )
                 })}
             </ul>
-            {/*
-              This links to a page that does not yet exist.
-              You'll come back to it!
-            */}
-            <Link to="/tags"><h2>Ve todos los tags</h2></Link>
+            <Link to="/tags" ><div className="div-tag marginbottom">Ve todos los tags</div></Link>
         </div>
         </Layout>
+        </React.Fragment>
     )
 }
 

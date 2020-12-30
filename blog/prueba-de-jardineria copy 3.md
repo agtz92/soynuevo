@@ -1,7 +1,7 @@
 ---
 title: Prueba de jardineria
 slug: prueba-jardineria-4
-featuredimage: /assets/jardineria.jpg
+featuredimage: jardineria.jpg
 date: 2020-10-25T18:42:34.799Z
 dificultad: Experto
 categoria: Jardinería

@@ -1,7 +1,7 @@
 ---
 title: Prueba draft
 slug: prueba-draft
-featuredimage: /assets/romits.jpg
+featuredimage: romits.jpg
 date: 2020-11-29T01:19:05.429Z
 dificultad: Fácil
 categoria: Coctelería

@@ -1,7 +1,7 @@
 ---
 title: Alejandro tiene un setup bien perro
 slug: alejandro-setup
-featuredimage: /assets/alejandro.jpg
+featuredimage: alejandro.jpg
 date: 2020-10-25T01:27:23.957Z
 dificultad: Experto
 categoria: Pesca

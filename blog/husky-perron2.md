@@ -1,7 +1,7 @@
 ---
 title: Husky perron2
 slug: husky-perron2
-featuredimage: /assets/silly_husky.jpg
+featuredimage: silly_husky.jpg
 date: 2020-10-19T23:12:18.502Z
 dificultad: Intermedio
 categoria: Pesca

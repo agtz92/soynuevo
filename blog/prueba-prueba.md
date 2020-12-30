@@ -1,7 +1,7 @@
 ---
 title: PRUEBA PRUEBA
 slug: prueba-prueba
-featuredimage: /assets/silly_husky.jpg
+featuredimage: silly_husky.jpg
 date: 2020-11-25T22:37:30.774Z
 dificultad: Experto
 categoria: Coctelería
